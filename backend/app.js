@@ -2,11 +2,10 @@
 require("dotenv").config();
 
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
-const axios = require("axios");
-const app = express();
 const path = require("path");
+const bodyParser = require("body-parser");
+const axios = require("axios");
 
 const { Pool } = require("pg");
 const dbParams = require("./lib/db.js");
@@ -16,13 +15,16 @@ db.connect();
 
 
 const PORT = 8080;
+const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
+var testAPIRouter = require("./routes/testAPI");
 
 const usersRoutes = require("./routes/users");
 
-app.use("api/users", usersRoutes(db));
+app.use("/testAPI", testAPIRouter);
+app.use("/api/users", usersRoutes(db));
 
 app.get("/", (req, res) => {
   res.send("hello");
