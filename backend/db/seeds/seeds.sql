@@ -5,3 +5,4 @@
 --     username VARCHAR(30) NOT NULL UNIQUE
 -- );
 
+INSERT INTO users(email, password, username) VALUES ('test123@123.com', 'test', 'test123');

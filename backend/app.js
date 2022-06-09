@@ -12,14 +12,19 @@ db.connect();
 
 const path = require("path");
 const PORT = 8080;
-
 app.use(bodyParser.urlencoded({ extended: true }));
-
 app.use(cors());
+
+const usersRoutes = require("./routes/users");
+
+app.use("api/users", usersRoutes(db));
 
 app.get("/", (req, res) => {
   res.send("hello");
 });
+
+
+
 
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
