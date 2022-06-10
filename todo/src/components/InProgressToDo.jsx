@@ -5,6 +5,7 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import ToDoItem from './ToDoItem';
 
 const bull = (
   <Box
@@ -15,11 +16,18 @@ const bull = (
   </Box>
 );
 
-export default function InProgressToDo() {
+export default function InProgressToDo({pendingItems}) {
+
+const pendingItem = pendingItems.map(item => {
+  return <ToDoItem item={item.message}></ToDoItem>
+})
+
+  console.log(pendingItems)
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
       This is Pending
+      {pendingItem}
       </CardContent>
       
     </Card>

@@ -19,7 +19,7 @@ const bull = (
 export default function NewToDo({newItems}) {
 
   const newItem = newItems.map((item)=> {
-    console.log(item.message)
+    // console.log(item.message)
     return <ToDoItem item={item.message}></ToDoItem>
   })
 

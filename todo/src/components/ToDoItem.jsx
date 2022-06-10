@@ -22,6 +22,9 @@ export default function ToDoItem({item}) {
     <Card sx={{ minWidth: 200 }}>
       <CardContent>
       {item}
+      <details>
+        <summary>Comment</summary>
+      </details>
       </CardContent>
       
     </Card>
