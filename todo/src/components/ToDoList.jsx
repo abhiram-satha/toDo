@@ -13,12 +13,23 @@ export default function ToDoList({listOfToDos}) {
     return newToDoItem
   }
 
+  const pendingItems = () => {
+    const pendingToDoItem = listOfToDos.filter(listOfToDo => listOfToDo.status_id === 2)
+
+    return pendingToDoItem
+  }
+
+  const completedItems = () => {
+    const completedToDoItem = listOfToDos.filter(listOfToDo => listOfToDo.status_id === 2)
+
+    return completedToDoItem
+  }
   
   return(
     <div className="toDoFlex">
-      <NewToDo newItems={newItems}/>
-      <InProgressToDo />
-      <CompletedToDo />
+      <NewToDo newItems={newItems()}/>
+      <InProgressToDo pendingItems={pendingItems()}/>
+      <CompletedToDo completedItems={completedItems()}/>
     </div>
   )
 }
