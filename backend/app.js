@@ -64,11 +64,13 @@ app.use(cors());
 
 //Seperated Routes for Resources
 const usersRoutes = require("./routes/users");
+const postRoutes = require("./routes/posts");
 
 
 //Mount all resource routes
 
 app.use("/api/users", usersRoutes(db));
+app.use("/api/posts", postRoutes(db));
 
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);

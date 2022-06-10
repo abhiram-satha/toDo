@@ -17,6 +17,7 @@ CREATE TABLE statusname (
 CREATE TABLE posts (
     id SERIAL PRIMARY KEY NOT NULL,
     user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
+    message TEXT,
     status_id INTEGER REFERENCES statusname(id) ON DELETE CASCADE
 );
 
