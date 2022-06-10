@@ -3,7 +3,7 @@ import './ToDoList.css';
 import CompletedToDo from "./CompletedToDo";
 import InProgressToDo from "./InProgressToDo";
 import NewToDo from "./NewToDo";
-
+import ToDoItem from "./ToDoItem"
 
 
 export default function ToDoList({listOfToDos}) {
