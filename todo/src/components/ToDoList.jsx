@@ -7,10 +7,16 @@ import NewToDo from "./NewToDo";
 
 export default function ToDoList({listOfToDos}) {
 
-  console.log(listOfToDos)
+  const newItems = () => {
+    const newToDoItem = listOfToDos.filter(listOfToDo => listOfToDo.status_id === 1)
+
+    return newToDoItem
+  }
+
+  
   return(
     <div className="toDoFlex">
-      <NewToDo />
+      <NewToDo newItems={newItems}/>
       <InProgressToDo />
       <CompletedToDo />
     </div>

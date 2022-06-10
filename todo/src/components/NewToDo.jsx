@@ -1,4 +1,4 @@
-export default function NewToDo() {
+export default function NewToDo({newItems}) {
   return(
     <div>
       This is New
