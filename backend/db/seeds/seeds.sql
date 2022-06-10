@@ -5,6 +5,8 @@ INSERT INTO statusname(statusid) VALUES ('pending');
 INSERT INTO statusname(statusid) VALUES ('completed');
 
 INSERT INTO posts(user_id, message,status_id) VALUES (1, 'Work on portfolio', 1);
+INSERT INTO posts(user_id, message,status_id) VALUES (1, 'Finish Lighthouse Labs', 3);
+
 -- CREATE TABLE statusname (
 --     id SERIAL PRIMARY KEY NOT NULL,
 --     statusid VARCHAR(30) NOT NULL UNIQUE
