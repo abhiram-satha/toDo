@@ -15,19 +15,20 @@ const bull = (
   </Box>
 );
 
-export default function CommentCard({}) {
+export default function CommentCard({comment}) {
 
-
+console.log(comment)
   return (
-    <Card sx={{ minWidth: 175 }}>
-      <CardContent>
-  
-      <details>
-        <summary></summary>
-
-      </details>
-      </CardContent>
-      
-    </Card>
+    <>
+    {comment.length > 0 ? 
+     <Card sx={{ minWidth: 175 }}>
+     <CardContent>
+       {console.log(comment.comment)}
+     {comment.comment}
+     </CardContent>
+     
+   </Card> : ""}
+   
+    </>
   );
 }

@@ -4,12 +4,13 @@ INSERT INTO statusname(statusid) VALUES ('new');
 INSERT INTO statusname(statusid) VALUES ('pending');
 INSERT INTO statusname(statusid) VALUES ('completed');
 
-INSERT INTO posts(user_id, message,status_id) VALUES (1, 'Work on portfolio', 1);
-INSERT INTO posts(user_id, message,status_id) VALUES (1, 'Learn Typescript', 1);
-INSERT INTO posts(user_id, message,status_id) VALUES (1, 'Finish Lighthouse Labs', 3);
-INSERT INTO posts(user_id, message,status_id) VALUES (1, 'Work on to do react', 2);
+INSERT INTO posts(user_id, message, status_id) VALUES (1, 'Work on portfolio', 1);
+INSERT INTO posts(user_id, message, status_id) VALUES (1, 'Learn Typescript', 1);
+INSERT INTO posts(user_id, message, status_id) VALUES (1, 'Finish Lighthouse Labs', 3);
+INSERT INTO posts(user_id, message, status_id) VALUES (1, 'Work on to do react', 2);
 
 INSERT INTO comments(comment, post_id) VALUES ('This is amazing', 2);
+INSERT INTO comments(comment, post_id) VALUES ('This is fun', 2);
  
     -- id SERIAL PRIMARY KEY NOT NULL,
     -- comment TEXT,

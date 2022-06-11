@@ -21,7 +21,7 @@ export default function ToDoList({listOfToDos, listOfComments}) {
   }
 
   const completedItems = () => {
-    const completedToDoItem = listOfToDos.filter(listOfToDo => listOfToDo.status_id === 2)
+    const completedToDoItem = listOfToDos.filter(listOfToDo => listOfToDo.status_id === 3)
 
     return completedToDoItem
   }

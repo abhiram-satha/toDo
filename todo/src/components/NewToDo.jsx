@@ -23,7 +23,7 @@ export default function NewToDo({newItems, listOfComments}) {
     return <ToDoItem key={item.id} id={item.id} item={item.message} listOfComments={listOfComments}></ToDoItem>
   })
 
-  console.log(listOfComments)
+  // console.log(listOfComments)
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
