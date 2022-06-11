@@ -18,11 +18,22 @@ function App() {
     getPosts()
   }, [])
 
+  const createNewToDo = (event) => {
+    event.preventDefault();
+
+    const userInput = event.target[0].value
+    axios.post('http://localhost:8080/api/posts', {
+      user_id: 1,
+      message: userInput,
+      status_id: 1
+    })
+  }
+
   return (
     <div className="App">
 
 
-      <AddToDo />
+      <AddToDo createNewToDo={createNewToDo}/>
 
       {toDos.length >= 1 && <ToDoList listOfToDos={toDos}/>}
       

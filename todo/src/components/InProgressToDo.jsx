@@ -22,7 +22,7 @@ const pendingItem = pendingItems.map(item => {
   return <ToDoItem item={item.message}></ToDoItem>
 })
 
-  console.log(pendingItems)
+  // console.log(pendingItems)
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>
