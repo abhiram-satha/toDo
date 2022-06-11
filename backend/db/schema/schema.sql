@@ -25,6 +25,6 @@ CREATE TABLE posts (
 CREATE TABLE comments (
     id SERIAL PRIMARY KEY NOT NULL,
     comment TEXT,
-    status_id INTEGER REFERENCES posts(id) ON DELETE CASCADE
+    post_id INTEGER REFERENCES posts(id) ON DELETE CASCADE
 )
 
