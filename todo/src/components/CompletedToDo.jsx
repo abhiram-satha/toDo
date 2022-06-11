@@ -19,7 +19,7 @@ const bull = (
 export default function CompletedToDo({completedItems}) {
 
   const completedItem = completedItems.map(item => {
-    return <ToDoItem item={item.message}></ToDoItem>
+    return <ToDoItem key={item.id} item={item.message}></ToDoItem>
   })
 
   return (

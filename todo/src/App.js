@@ -30,14 +30,6 @@ function App() {
         return axios('http://localhost:8080/api/posts')
       })
       .then(result => setToDos(result.data.posts))
-      
-      
-      // .then(()=> getPosts())
-      //   function getPosts() {
-      //   const results = axios('http://localhost:8080/api/posts')
-      //   .then(()=> setToDos(results.data.posts))
-        
-      // }
 
       
       event.target[0].value = "";
