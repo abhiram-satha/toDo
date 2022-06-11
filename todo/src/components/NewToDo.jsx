@@ -16,14 +16,14 @@ const bull = (
   </Box>
 );
 
-export default function NewToDo({newItems}) {
+export default function NewToDo({newItems, listOfComments}) {
 
   const newItem = newItems.map((item)=> {
-    console.log(item)
-    return <ToDoItem key={item.id} item={item.message}></ToDoItem>
+    // console.log(item)
+    return <ToDoItem key={item.id} id={item.id} item={item.message} listOfComments={listOfComments}></ToDoItem>
   })
 
-  // console.log(newItems)
+  console.log(listOfComments)
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent>

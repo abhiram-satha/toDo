@@ -15,15 +15,15 @@ const bull = (
   </Box>
 );
 
-export default function ToDoItem({item, id, listOfComments}) {
+export default function CommentCard({}) {
 
-  // console.log(newItems)
+
   return (
-    <Card sx={{ minWidth: 200 }}>
+    <Card sx={{ minWidth: 175 }}>
       <CardContent>
-      {item}
+  
       <details>
-        <summary>Comment</summary>
+        <summary></summary>
 
       </details>
       </CardContent>

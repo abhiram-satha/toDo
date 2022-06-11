@@ -6,14 +6,21 @@ import axios from "axios";
 
 function App() {
   const [toDos, setToDos] = useState([]);
+  const [comments, setComments] = useState([]);
 
   useEffect(() => {
     async function getPosts() {
       const results = await axios("http://localhost:8080/api/posts");
       setToDos(results.data.posts);
     }
+    async function getComments() {
+      const results = await axios("http://localhost:8080/api/comments");
+      // console.log(results.data.comment)
+      setComments(results.data.comment)
+    }
 
     getPosts();
+    getComments();
   }, []);
 
   const createNewToDo = (event) => {
@@ -39,7 +46,7 @@ function App() {
     <div className="App">
       <AddToDo createNewToDo={createNewToDo} />
 
-      {toDos.length >= 1 && <ToDoList listOfToDos={toDos} />}
+      {toDos.length >= 1 && <ToDoList listOfToDos={toDos} listOfComments={comments}/>}
     </div>
   );
 }
