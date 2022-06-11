@@ -22,5 +22,9 @@ CREATE TABLE posts (
     status_id INTEGER REFERENCES statusname(id) ON DELETE CASCADE
 );
 
-
+CREATE TABLE comments (
+    id SERIAL PRIMARY KEY NOT NULL,
+    comment TEXT,
+    status_id INTEGER REFERENCES posts(id) ON DELETE CASCADE
+)
 
