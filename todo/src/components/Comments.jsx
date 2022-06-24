@@ -21,26 +21,26 @@ export default function Comments({id, comments}) {
   let comment = "";
 
 
-  const aComment = () => {
-    console.log(id)
-
-
-    if (true) {
+  const aComment = 
+    
+    
+    // if (comments.post_id === id) {
+      // console.log(id, comments.length)
 
       comments.filter(comment => {
         return comment.post_id === id
       }).map(comment => {
+        console.log(comment)
         return <SingleComment comment={comment.comment}></SingleComment>
       })
-    }
-  }
+    // }
+
     
   
     
   return (
     <Card sx={{ minWidth: 200 }}>
       <CardContent>
-        <>This is a comment</>
         {aComment}
       </CardContent>
       

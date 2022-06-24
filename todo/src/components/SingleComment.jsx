@@ -24,7 +24,7 @@ export default function SingleComment({comment}) {
   return (
     <Card sx={{ minWidth: 200 }}>
       <CardContent>
-        <>This is a new comment</>
+        {comment}
       </CardContent>
       
     </Card>
