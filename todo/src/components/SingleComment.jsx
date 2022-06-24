@@ -22,11 +22,8 @@ export default function SingleComment({comment}) {
   
     
   return (
-    <Card sx={{ minWidth: 200 }}>
-      <CardContent>
-        {comment}
-      </CardContent>
-      
-    </Card>
+<>
+    {comment && <Card sx={{ minWidth: 200 }}><CardContent>{comment}</CardContent></Card>}
+    </>
   );
 }
