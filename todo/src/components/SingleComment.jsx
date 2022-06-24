@@ -5,7 +5,6 @@ import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
-import Comments from './Comments';
 
 const bull = (
   <Box
@@ -16,20 +15,16 @@ const bull = (
   </Box>
 );
 
-export default function ToDoItem({item, id, listOfComments}) {
+export default function SingleComment({comment}) {
 
-  // console.log(listOfComments)
+  console.log(comment)
 
   
     
   return (
     <Card sx={{ minWidth: 200 }}>
       <CardContent>
-      {item}
-      <details>
-        <summary>Comment</summary>
-        <Comments id={id} comments={listOfComments}></Comments>
-      </details>
+        <>This is a new comment</>
       </CardContent>
       
     </Card>
