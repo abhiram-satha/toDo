@@ -16,7 +16,7 @@ function App() {
     async function getComments() {
       const results = await axios("http://localhost:8080/api/comments");
       // console.log(results.data.comment)
-      setComments(results.data.comment)
+      setComments(results.data.comment);
     }
 
     getPosts();
@@ -33,20 +33,26 @@ function App() {
         message: userInput,
         status_id: 1,
       })
-      .then(()=> {
-        return axios('http://localhost:8080/api/posts')
+      .then(() => {
+        return axios("http://localhost:8080/api/posts");
       })
-      .then(result => setToDos(result.data.posts))
+      .then((result) => setToDos(result.data.posts));
 
-      
-      event.target[0].value = "";
+    event.target[0].value = "";
+  };
+
+  const changeStatusToPending = (id, event) => {
+    event.preventDefault();
+    console.log(id);
   };
 
   return (
     <div className="App">
       <AddToDo createNewToDo={createNewToDo} />
 
-      {toDos.length >= 1 && <ToDoList listOfToDos={toDos} listOfComments={comments}/>}
+      {toDos.length >= 1 && (
+        <ToDoList listOfToDos={toDos} listOfComments={comments} changeStatusToPending={changeStatusToPending}/>
+      )}
     </div>
   );
 }

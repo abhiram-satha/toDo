@@ -17,7 +17,7 @@ const bull = (
 
 export default function SingleComment({comment}) {
 
-  console.log(comment)
+  // console.log(comment)
 
   
     

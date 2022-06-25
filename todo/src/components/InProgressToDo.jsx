@@ -19,7 +19,7 @@ const bull = (
 export default function InProgressToDo({pendingItems, listOfComments}) {
 
 const pendingItem = pendingItems.map(item => {
-  return <ToDoItem key={item.id} item={item.message} id={item.id} listOfComments={listOfComments}></ToDoItem>
+  return <ToDoItem key={item.id} item={item.message} status={item.status_id} id={item.id} listOfComments={listOfComments}></ToDoItem>
 })
 
   // console.log(pendingItems)

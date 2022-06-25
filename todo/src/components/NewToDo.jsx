@@ -16,11 +16,11 @@ const bull = (
   </Box>
 );
 
-export default function NewToDo({newItems, listOfComments}) {
-
+export default function NewToDo({newItems, listOfComments, changeStatusToPending}) {
+console.log(newItems)
   const newItem = newItems.map((item)=> {
     // console.log(item)
-    return <ToDoItem key={item.id} id={item.id} item={item.message} listOfComments={listOfComments}></ToDoItem>
+    return <ToDoItem key={item.id} id={item.id} item={item.message} status={item.status_id} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending}></ToDoItem>
   })
 
   // console.log(listOfComments)
