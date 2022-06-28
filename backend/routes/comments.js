@@ -17,7 +17,7 @@ module.exports = (db) => {
     const values = [req.body.comment, req.body.post_id];
     console.log(req.body);
 
-    const query = `INSERT INTO POSTS (user_id, message,post_id) VALUES ($1, $2)`;
+    const query = `INSERT INTO comments (comment, post_id) VALUES ($1, $2)`;
     db.query(query, values)
       .then(() => {
         res.send("Comment added");
