@@ -15,7 +15,7 @@ module.exports = (db) => {
 
   router.post("/", (req, res) => {
     const values = [req.body.comment, req.body.post_id];
-    console.log(req.body);
+    console.log(2, req.body);
 
     const query = `INSERT INTO comments (comment, post_id) VALUES ($1, $2)`;
     db.query(query, values)

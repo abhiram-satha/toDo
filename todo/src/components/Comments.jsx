@@ -16,7 +16,7 @@ const bull = (
   </Box>
 );
 
-export default function Comments({id, comments}) {
+export default function Comments({id, comments, createComment}) {
 
   let comment = "";
 
@@ -34,6 +34,10 @@ export default function Comments({id, comments}) {
     
   return (
     <Card sx={{ minWidth: 200 }}>
+      <form onSubmit={(event)=>{createComment(id, event)}}>
+        <input type="text" placeholder="Create Comment"></input>
+        <input type="submit"></input>
+      </form>
       <CardContent>
         {aComment}
       </CardContent>

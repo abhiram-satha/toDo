@@ -86,6 +86,21 @@ function App() {
       });
   };
 
+  const createComment = (id, event) => {
+    event.preventDefault();
+
+    const comment = event.target[0].value;
+    axios.post(`http://localhost:8080/api/comments`, {
+      comment,
+      post_id: id 
+    }).then(()=> {
+      return axios("http://localhost:8080/api/comments")
+    })
+    .then((result)=> {
+      setComments(result.data.comment)
+    })
+  };
+
   return (
     <div className="App">
       <AddToDo createNewToDo={createNewToDo} />
@@ -97,6 +112,7 @@ function App() {
           changeStatusToPending={changeStatusToPending}
           changeStatusToCompleted={changeStatusToCompleted}
           changeStatusToNew={changeStatusToNew}
+          createComment={createComment}
         />
       )}
     </div>
