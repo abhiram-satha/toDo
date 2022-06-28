@@ -26,7 +26,7 @@ export default function Comments({id, comments}) {
         return comment.post_id === id
       }).map(comment => {
         // console.log(comment)
-        return <SingleComment comment={comment.comment}></SingleComment>
+        return <SingleComment key={comment.id} comment={comment.comment}></SingleComment>
       })
 
     

@@ -43,7 +43,7 @@ function App() {
 
   const changeStatusToPending = (id, event) => {
     event.preventDefault();
-    console.log(id);
+    console.log(toDos[id - 1]);
   };
 
   return (

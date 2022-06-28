@@ -18,7 +18,7 @@ const bull = (
 
 export default function ToDoItem({item, id, status, listOfComments, changeStatusToPending}) {
 
-  console.log(status, item)
+  // console.log(status, item)
 
   
     
