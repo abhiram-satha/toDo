@@ -43,10 +43,18 @@ function App() {
 
   const changeStatusToPending = (id, event) => {
     event.preventDefault();
-    let copyOfToDos = [...toDos];
-    let copyofToDo = {...copyOfToDos[id - 1], status_id: 2}
-    setToDos = [...copyOfToDos, copyOfToDos[id-1] = copyofToDo]
-    console.log(toDos)
+
+    axios.put(`http://localhost:8080/api/posts/${id}`, {
+      status_id: 2
+    })
+    .then(()=> {
+      return axios("http://localhost:8080/api/posts")
+    })
+    .then(result => {setToDos(result.data.posts)})
+    // let copyOfToDos = [...toDos];
+    // let copyofToDo = {...copyOfToDos[id - 1], status_id: 2}
+    // setToDos = [...copyOfToDos, copyOfToDos[id-1] = copyofToDo]
+    // console.log(toDos)
     
 
 
