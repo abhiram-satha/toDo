@@ -16,10 +16,10 @@ const bull = (
   </Box>
 );
 
-export default function InProgressToDo({pendingItems, listOfComments}) {
+export default function InProgressToDo({pendingItems, listOfComments, changeStatusToCompleted, changeStatusToNew}) {
 
 const pendingItem = pendingItems.map(item => {
-  return <ToDoItem key={item.id} item={item.message} status={item.status_id} id={item.id} listOfComments={listOfComments}></ToDoItem>
+  return <ToDoItem key={item.id} item={item.message} status={item.status_id} id={item.id} listOfComments={listOfComments} changeStatusToCompleted={changeStatusToCompleted} changeStatusToNew={changeStatusToNew}></ToDoItem>
 })
 
   // console.log(pendingItems)

@@ -16,7 +16,7 @@ const bull = (
   </Box>
 );
 
-export default function ToDoItem({item, id, status, listOfComments, changeStatusToPending, changeStatusToCompleted}) {
+export default function ToDoItem({item, id, status, listOfComments, changeStatusToPending, changeStatusToCompleted, changeStatusToNew}) {
 
   // console.log(status, item)
 
@@ -27,7 +27,8 @@ export default function ToDoItem({item, id, status, listOfComments, changeStatus
       <CardContent>
       {item}
       <details>
-        <summary>Comment</summary>
+        <summary>Details</summary>
+        {status !== 1 && <button onClick={(event)=>changeStatusToNew(id, event)}>New</button>}
         {status !== 2 && <button onClick={(event)=>changeStatusToPending(id, event)}>Pending</button>}
         {status !== 3 && <button onClick={(event)=>changeStatusToCompleted(id, event)}>Completed</button>}
 

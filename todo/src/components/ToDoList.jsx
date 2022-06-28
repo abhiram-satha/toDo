@@ -6,7 +6,7 @@ import NewToDo from "./NewToDo";
 import ToDoItem from "./ToDoItem"
 
 
-export default function ToDoList({listOfToDos, listOfComments, changeStatusToPending, changeStatusToCompleted}) {
+export default function ToDoList({listOfToDos, listOfComments, changeStatusToPending, changeStatusToCompleted, changeStatusToNew}) {
 
   const newItems = () => {
     const newToDoItem = listOfToDos.filter(listOfToDo => listOfToDo.status_id === 1)
@@ -29,8 +29,8 @@ export default function ToDoList({listOfToDos, listOfComments, changeStatusToPen
   return(
     <div className="toDoFlex">
       <NewToDo newItems={newItems()} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending} changeStatusToCompleted={changeStatusToCompleted}/>
-      <InProgressToDo pendingItems={pendingItems()} listOfComments={listOfComments}/>
-      <CompletedToDo completedItems={completedItems()} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending}/>
+      <InProgressToDo pendingItems={pendingItems()} listOfComments={listOfComments} changeStatusToCompleted={changeStatusToCompleted} changeStatusToNew={changeStatusToNew}/>
+      <CompletedToDo completedItems={completedItems()} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending} changeStatusToNew={changeStatusToNew}/>
     </div>
   )
 }
