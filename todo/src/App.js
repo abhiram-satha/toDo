@@ -56,6 +56,21 @@ function App() {
       });
   };
 
+  const changeStatusToCompleted = (id, event) => {
+    event.preventDefault();
+
+    axios
+      .put(`http://localhost:8080/api/posts/${id}`, {
+        status_id: 3,
+      })
+      .then(() => {
+        return axios("http://localhost:8080/api/posts");
+      })
+      .then((result) => {
+        setToDos(result.data.posts);
+      });
+  };
+
   return (
     <div className="App">
       <AddToDo createNewToDo={createNewToDo} />
@@ -65,6 +80,7 @@ function App() {
           listOfToDos={toDos}
           listOfComments={comments}
           changeStatusToPending={changeStatusToPending}
+          changeStatusToCompleted={changeStatusToCompleted}
         />
       )}
     </div>
