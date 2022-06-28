@@ -17,10 +17,24 @@ module.exports = (db) => {
     const values = [req.body.user_id, req.body.message, req.body.status_id];
     console.log(req.body);
 
-    const query = `INSERT INTO POSTS (user_id, message,status_id) VALUES ($1, $2, $3)`;
+    const query = `INSERT INTO posts (user_id, message,status_id) VALUES ($1, $2, $3)`;
     db.query(query, values)
       .then(() => {
         res.send("Post added");
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message });
+      });
+  });
+
+  router.put("/:id", (req, res) => {
+    const values = [req.params.id, req.body.status_id];
+    console.log(req.body);
+
+    const query = `UPDATE posts SET status_id = $2 WHERE id = $1`;
+    db.query(query, values)
+      .then(() => {
+        res.send("Post updated");
       })
       .catch((err) => {
         res.status(500).json({ error: err.message });

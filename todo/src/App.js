@@ -43,7 +43,13 @@ function App() {
 
   const changeStatusToPending = (id, event) => {
     event.preventDefault();
-    console.log(toDos[id - 1]);
+    let copyOfToDos = [...toDos];
+    let copyofToDo = {...copyOfToDos[id - 1], status_id: 2}
+    setToDos = [...copyOfToDos, copyOfToDos[id-1] = copyofToDo]
+    console.log(toDos)
+    
+
+
   };
 
   return (
