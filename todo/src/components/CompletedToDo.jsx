@@ -16,10 +16,10 @@ const bull = (
   </Box>
 );
 
-export default function CompletedToDo({completedItems, listOfComments, changeStatusToPending, createComment, changeStatusToNew}) {
+export default function CompletedToDo({completedItems, listOfComments, deletePost, changeStatusToPending, createComment, changeStatusToNew}) {
 
   const completedItem = completedItems.map(item => {
-    return <ToDoItem key={item.id} item={item.message} status={item.status_id} id={item.id} createComment={createComment} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending} changeStatusToNew={changeStatusToNew}></ToDoItem>
+    return <ToDoItem key={item.id} item={item.message} deletePost={deletePost} status={item.status_id} id={item.id} createComment={createComment} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending} changeStatusToNew={changeStatusToNew}></ToDoItem>
   })
 
   return (

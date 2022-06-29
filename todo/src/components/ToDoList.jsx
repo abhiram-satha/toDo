@@ -29,8 +29,8 @@ export default function ToDoList({listOfToDos, deletePost, listOfComments, chang
   return(
     <div className="toDoFlex">
       <NewToDo newItems={newItems()} deletePost={deletePost} createComment={createComment} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending} changeStatusToCompleted={changeStatusToCompleted}/>
-      <InProgressToDo pendingItems={pendingItems()} createComment={createComment} listOfComments={listOfComments} changeStatusToCompleted={changeStatusToCompleted} changeStatusToNew={changeStatusToNew}/>
-      <CompletedToDo completedItems={completedItems()} createComment={createComment} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending} changeStatusToNew={changeStatusToNew}/>
+      <InProgressToDo pendingItems={pendingItems()} deletePost={deletePost} createComment={createComment} listOfComments={listOfComments} changeStatusToCompleted={changeStatusToCompleted} changeStatusToNew={changeStatusToNew}/>
+      <CompletedToDo completedItems={completedItems()} deletePost={deletePost} createComment={createComment} listOfComments={listOfComments} changeStatusToPending={changeStatusToPending} changeStatusToNew={changeStatusToNew}/>
     </div>
   )
 }
