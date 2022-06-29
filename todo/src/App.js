@@ -99,6 +99,9 @@ function App() {
     .then((result)=> {
       setComments(result.data.comment)
     })
+    .then(()=> {
+      event.target[0].value = ""
+    })
   };
 
   return (
