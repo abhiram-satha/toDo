@@ -29,7 +29,7 @@ module.exports = (db) => {
 
   router.put("/:id", (req, res) => {
     const values = [req.params.id, req.body.status_id];
-    console.log(req.body);
+    // console.log(req.body);
 
     const query = `UPDATE posts SET status_id = $2 WHERE id = $1`;
     db.query(query, values)
@@ -40,5 +40,18 @@ module.exports = (db) => {
         res.status(500).json({ error: err.message });
       });
   });
+
+  router.delete("/:id", (req,res) => {
+    const value = [req.params.id];
+    console.log(value)
+    const query = `DELETE from posts WHERE id = $1`;
+    db.query(query, value)
+      .then(() => {
+        res.send("Post Deleted");
+      })
+      .catch((err) => {
+        res.status(500).json({ error: err.message})
+      })
+  })
   return router;
 };

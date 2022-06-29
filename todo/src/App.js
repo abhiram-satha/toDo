@@ -23,6 +23,17 @@ function App() {
     getComments();
   }, []);
 
+  const deletePost = (id, event) => {
+    event.preventDefault();
+
+    axios 
+      .delete(`http://localhost:8080/api/posts/${id}`)
+      .then(() => {
+        return axios("http://localhost:8080/api/posts")
+      })
+      .then((result) => setToDos(result.data.posts))
+  }
+
   const createNewToDo = (event) => {
     event.preventDefault();
 
@@ -111,6 +122,7 @@ function App() {
       {toDos.length >= 1 && (
         <ToDoList
           listOfToDos={toDos}
+          deletePost={deletePost}
           listOfComments={comments}
           changeStatusToPending={changeStatusToPending}
           changeStatusToCompleted={changeStatusToCompleted}
