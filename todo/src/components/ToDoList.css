@@ -5,10 +5,14 @@ div.toDoFlex {
 }
 
 
-.newToCard {
+.newToDoCard {
   background-color: rgb(208, 79, 79);
 }
 
-.progressToCard {
+.progressToDoCard {
   background-color: rgb(227, 115, 24);
+}
+
+.completedToDoCard {
+  background-color: rgb(57, 147, 57);
 }

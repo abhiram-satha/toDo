@@ -42,7 +42,7 @@ export default function CompletedToDo({
 
   return (
     <Card sx={{ minWidth: 275 }}>
-      <CardContent>
+      <CardContent className="completedToDoCard">
         This is CompletedToDo
         {completedItem}
       </CardContent>

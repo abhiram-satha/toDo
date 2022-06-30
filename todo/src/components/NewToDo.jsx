@@ -45,7 +45,7 @@ export default function NewToDo({
   // console.log(listOfComments)
   return (
     <Card sx={{ minWidth: 275 }}>
-      <CardContent className="newToCard">
+      <CardContent className="newToDoCard">
         This is New
         {newItem}
       </CardContent>
