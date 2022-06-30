@@ -17,3 +17,6 @@ div.toDoFlex {
   background-color: #27b78d;
 }
 
+.createComment, .singleComment {
+  margin: .5em 0;
+}

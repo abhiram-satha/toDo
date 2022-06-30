@@ -34,8 +34,8 @@ export default function Comments({id, comments, createComment}) {
     
   return (
     <Card sx={{ minWidth: 200 }}>
-      <form onSubmit={(event)=>{createComment(id, event)}}>
-        <input type="text" placeholder="Create Comment"></input>
+      <form onSubmit={(event)=>{createComment(id, event)}} className="createComment">
+        <input type="text" placeholder="New Comment"></input>
         <input type="submit"></input>
       </form>
       <CardContent>
