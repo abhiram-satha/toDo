@@ -17,6 +17,17 @@ div.toDoFlex {
   background-color: #27b78d;
 }
 
-.createComment, .singleComment {
+.createComment, .singleComment, .cardContent {
   margin: .5em 0;
+}
+
+.deleteIcon {
+  width: 5%;
+  height: auto;
+}
+
+.deleteButton {
+  border: none;
+  background: none;
+
 }
