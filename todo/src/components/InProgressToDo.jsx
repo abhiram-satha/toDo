@@ -44,7 +44,7 @@ export default function InProgressToDo({
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent className="progressToDoCard">
-        This is Pending
+        <p>Pending Tasks</p>
         {pendingItem}
       </CardContent>
     </Card>

@@ -46,7 +46,7 @@ export default function NewToDo({
   return (
     <Card sx={{ minWidth: 275 }}>
       <CardContent className="newToDoCard">
-        This is New
+        <p>New Tasks</p>
         {newItem}
       </CardContent>
     </Card>

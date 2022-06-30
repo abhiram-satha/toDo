@@ -29,9 +29,9 @@ export default function ToDoItem({item, id, status, deletePost, listOfComments, 
       <button onClick={(event)=>{deletePost(id, event)}}>Delete</button>
       <details>
         <summary>Details</summary>
-        {status !== 1 && <button onClick={(event)=>changeStatusToNew(id, event)}>New</button>}
-        {status !== 2 && <button onClick={(event)=>changeStatusToPending(id, event)}>Pending</button>}
-        {status !== 3 && <button onClick={(event)=>changeStatusToCompleted(id, event)}>Completed</button>}
+        {status !== 1 && <button className="newToDoCard" onClick={(event)=>changeStatusToNew(id, event)}>New</button>}
+        {status !== 2 && <button className="progressToDoCard" onClick={(event)=>changeStatusToPending(id, event)}>Pending</button>}
+        {status !== 3 && <button className="completedToDoCard" onClick={(event)=>changeStatusToCompleted(id, event)}>Completed</button>}
 
         <Comments id={id} createComment={createComment} comments={listOfComments}></Comments>
       </details>
