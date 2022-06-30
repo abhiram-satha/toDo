@@ -3,3 +3,12 @@ div.toDoFlex {
   flex-direction: row;
   justify-content: space-around;
 }
+
+
+.newToCard {
+  background-color: rgb(208, 79, 79);
+}
+
+.progressToCard {
+  background-color: rgb(227, 115, 24);
+}
