@@ -41,3 +41,7 @@ details summary {
   font-size: .7rem;
 }
 
+.addNewToDo {
+  background-color: rgb(49, 143, 238);
+  margin-bottom: 2%;
+}
