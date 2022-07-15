@@ -31,16 +31,20 @@ export default function ToDoItem({
 
   return (
     <Card sx={{ minWidth: 350 }} className="cardContent">
-      <CardContent >
-        {item}
+      <CardContent>
         <button
           onClick={(event) => {
             deletePost(id, event);
           }}
           className="deleteButton"
         >
-          <img className="deleteIcon" src="https://www.pngall.com/wp-content/uploads/5/Delete-Transparent.png"></img>
+          <img
+            className="deleteIcon"
+            src="https://www.pngall.com/wp-content/uploads/5/Delete-Transparent.png"
+          ></img>
         </button>
+        {item}
+
         <details>
           <summary>Details</summary>
           {status !== 1 && (
