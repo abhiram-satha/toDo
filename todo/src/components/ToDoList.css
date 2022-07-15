@@ -22,7 +22,7 @@ div.toDoFlex {
 }
 
 .deleteIcon {
-  width: 5%;
+  width: 100%;
   height: auto;
 }
 
@@ -31,5 +31,11 @@ div.toDoFlex {
   background: none;
   display: flex;
   flex-direction: row-reverse;
-  
+  width: 30px;
+  height: 30px;
+}
+
+.delete-Button {
+  display: flex;
+  flex-direction: row-reverse;
 }
