@@ -42,7 +42,7 @@ details summary {
 }
 /* .MuiCardContent-root 
 */
-.background-blue {
+.background-blue .addNewToDo{
   background-color: rgb(49, 143, 238);
   margin-bottom: 2%;
 }
