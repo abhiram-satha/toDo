@@ -29,5 +29,7 @@ div.toDoFlex {
 .deleteButton {
   border: none; 
   background: none;
+  display: flex;
+  flex-direction: row-reverse;
   
 }

@@ -32,6 +32,7 @@ export default function ToDoItem({
   return (
     <Card sx={{ minWidth: 350 }} className="cardContent">
       <CardContent>
+    
         <button
           onClick={(event) => {
             deletePost(id, event);
