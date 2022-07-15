@@ -40,8 +40,13 @@
 details summary {
   font-size: .7rem;
 }
-
-.addNewToDo {
+/* .MuiCardContent-root 
+*/
+.background-blue {
   background-color: rgb(49, 143, 238);
   margin-bottom: 2%;
+}
+
+#fullWidth{
+  background-color: white;
 }
