@@ -1,4 +1,4 @@
-import "./AddToDo.css"
+import "./AddToDo.css";
 
 import * as React from "react";
 import Box from "@mui/material/Box";
@@ -7,8 +7,7 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import TextField from '@mui/material/TextField';
-
+import TextField from "@mui/material/TextField";
 
 const bull = (
   <Box
@@ -19,27 +18,35 @@ const bull = (
   </Box>
 );
 
-export default function AddToDo ({createNewToDo}) {
-  return(
+export default function AddToDo({ createNewToDo }) {
+  return (
     <>
-    <div className="background-blue">
-    <Card sx={{ minWidth: 350 }} className="cardContent addNewToDo">
-      <CardContent >
-      <Box
-      sx={{
-        width: 500,
-        maxWidth: '100%',
-      }}
-
-    >
-      
-    </Box>
-      <form onSubmit={(event)=>{createNewToDo(event)}}>
-      <TextField onSubmit={(event)=>{createNewToDo(event)}} fullWidth placeholder="Add New To Do" id="fullWidth" />
-    </form>
-      </CardContent>
-    </Card>
-    </div>
+      <div className="background-blue">
+        <Card sx={{ minWidth: 350 }} className="cardContent addNewToDo">
+          <CardContent>
+            <Box
+              sx={{
+                width: 500,
+                maxWidth: "100%",
+              }}
+            ></Box>
+            <form
+              onSubmit={(event) => {
+                createNewToDo(event);
+              }}
+            >
+              <TextField
+                onSubmit={(event) => {
+                  createNewToDo(event);
+                }}
+                fullWidth
+                placeholder="Add New To Do"
+                id="fullWidth"
+              />
+            </form>
+          </CardContent>
+        </Card>
+      </div>
     </>
-  )
+  );
 }
