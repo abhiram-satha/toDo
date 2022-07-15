@@ -38,4 +38,10 @@ div.toDoFlex {
 .delete-Button {
   display: flex;
   flex-direction: row-reverse;
+  margin-right: -5%;
+  margin-top: -2%;
+}
+
+.item-flex {
+  margin-top: -10%;
 }

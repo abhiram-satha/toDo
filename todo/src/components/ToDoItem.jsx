@@ -45,7 +45,7 @@ export default function ToDoItem({
           ></img>
         </button>
         </span>
-        {item}
+        <div className="item-flex">{item}</div>
 
         <details>
           <summary>Details</summary>
