@@ -40,7 +40,7 @@ export default function AddToDo({ createNewToDo }) {
                   createNewToDo(event);
                 }}
                 fullWidth
-                placeholder="Add New To Do"
+                placeholder="Add New Task"
                 id="fullWidth"
               />
             </form>
